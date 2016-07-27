@@ -1,0 +1,12 @@
+@import 'bourbon/app/assets/stylesheets/bourbon';
+
+
+/// This is the background for the foo
+///
+/// @access public
+$foo-bg: #0ff;
+
+.foo {
+  @include clearfix;
+  background-color: $foo-bg;
+}
