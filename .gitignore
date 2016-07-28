@@ -3,7 +3,7 @@ dist
 .tmp
 bower_components
 test/bower_components
-typings/**/*
-!typings/custom/*.d.ts
+typings/*
+!typings/custom
 *.lock
 *.log
