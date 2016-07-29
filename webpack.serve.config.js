@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 config.entry.unit = './test/unit/main';
 config.entry.integration = './test/integration/main';
+config.entry.layout = './test/layout/main';
 config.debug = true;
 config.plugins.push(new webpack.NoErrorsPlugin());
 config.output.publicPath = '/scripts';

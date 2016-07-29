@@ -3,7 +3,7 @@ var webpackConfig = require('./webpack.test.config');
 
 module.exports = function (config) {
   return {
-    frameworks: [ 'mocha', 'chai-as-promised', 'chai', 'sinon' ],
+    frameworks: [ 'mocha', 'chai-as-promised', 'chai', 'sinon', 'quixote' ],
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
     ],
@@ -12,6 +12,7 @@ module.exports = function (config) {
       'karma-mocha',
       'karma-chai-as-promised',
       'karma-chai',
+      'karma-quixote',
       'karma-sinon',
       'karma-phantomjs-launcher'
     ],

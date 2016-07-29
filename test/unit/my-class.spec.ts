@@ -1,8 +1,9 @@
 import MyClass from '../../src/scripts/my-class';
 
-const { expect } = chai;
-
 describe('MyClass', function () {
+
+  const { expect } = chai;
+
   it('should create an instance of itself', function () {
     let instance = new MyClass();
 
