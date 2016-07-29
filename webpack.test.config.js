@@ -14,7 +14,8 @@ config.module.loaders = [
     test: /\.tsx?$/,
     include: path.resolve('src'),
     loader: 'isparta!ts'
-  }
+  },
+  { test: /\.hbs$/, loader: "handlebars" }
 ];
 
 config.devtool = 'inline-source-map';

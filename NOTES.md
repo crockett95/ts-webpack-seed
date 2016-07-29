@@ -5,7 +5,7 @@ Development Notes
 
 - [X] Integration tests
 - [ ] Typedoc
-- [ ] Handlebars _NB: `handlebars-loader` always included `handlebars/runtime` in package_
+- [X] Handlebars _NB: Override `handlebars/runtime` with query option_
 - [X] I18n
 - [X] Auto watch
   - [X] Karma runs (unit)
