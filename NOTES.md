@@ -39,6 +39,22 @@ Development Notes
   - [ ] scss-lint
   - [ ] `.editorconfig`
   - [ ] `.sassdocrc`
+- [ ] Travis CI integration
+  
+  This probably won't be too useful at work, but for other projects, it could be a major benefit. Will probably require some custom configurations and possibly gulp tasks.
+
+  - [ ] GH pages deployment
+
+    See [gist for deployment](https://gist.github.com/domenic/ec8b0fc8ab45f39403dd) for starting point on
+    getting this up and running. This will probably require some additional work to make it only deploy from master changes. Travis [seems to have that capability](https://docs.travis-ci.com/user/customizing-the-build/#Safelisting-or-blocklisting-branches) but it will probably require some fiddling. Found more information in the [deployment script documentation](https://docs.travis-ci.com/user/deployment/script/).
+
+  - [ ] SauceLabs testing
+
+    There's a possibility that the [karma-saucelabs-launcher](https://github.com/karma-runner/karma-sauce-launcher) will be the most straight forward way to do this, but I don't know yet.
+    
+  - [ ] basic testing
+
+    I'm not yet sure what the best way to handle this is. Look further into the capabilities of Travis to get this up and running.
 
 
 ## Commands
