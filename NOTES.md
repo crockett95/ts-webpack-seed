@@ -50,7 +50,7 @@ Development Notes
 
   - [ ] SauceLabs testing
 
-    There's a possibility that the [karma-saucelabs-launcher](https://github.com/karma-runner/karma-sauce-launcher) will be the most straight forward way to do this, but I don't know yet.
+    There's a possibility that the [karma-saucelabs-launcher](https://github.com/karma-runner/karma-sauce-launcher) will be the most straight forward way to do this, but I don't know yet. Found [an article](https://blog.codecentric.de/en/2014/11/testing-javascript-karma-and-saucelabs/) that seems to cover it.
     
   - [ ] basic testing
 
