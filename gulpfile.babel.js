@@ -47,6 +47,17 @@ gulp.task('tslint:src', lint.bind(null, './src/scripts/**/*.ts'));
 
 gulp.task('tslint:test', lint.bind(null, './test/**/*.ts'));
 
+gulp.task('typedoc', () => gulp.src(['./src/**/*.ts'])
+    .pipe($.typedoc({
+      module: 'umd',
+      target: 'es2015',
+      entryPoint: './main',
+      out: './docs/scripts',
+      name: 'Typescript Seed',
+      excludeExternals: true,
+      ignoreCompilerErrors: true
+    })));
+
 gulp.task('webpack:src', ['tslint:src'], () => gulp.src('./src/scripts/main.ts')
   .pipe(webpackStream(require('./webpack.dev.config')))
   .pipe(gulp.dest('./.tmp/scripts')));
@@ -73,7 +84,7 @@ gulp.task('watch', ['sass:dev'], () => {
   gulp.watch('./src/styles/**/*.scss', ['sass:watch']);
 });
 
-gulp.task('serve', ['clean', 'test', 'webpack:serve', 'sass:dev'], () => {
+gulp.task('serve', ['clean', 'test', 'webpack:serve', 'sass:dev', 'typedoc'], () => {
   let webpackConfig = require('./webpack.serve.config');
   let bundler = webpack(webpackConfig);
 
@@ -91,9 +102,10 @@ gulp.task('serve', ['clean', 'test', 'webpack:serve', 'sass:dev'], () => {
   });
 
   gulp.watch('./src/scripts/**/*.ts', ['tslint:src']);
+  gulp.watch('./src/scripts/**/*.ts', ['typedoc']);
   gulp.watch('./test/**/*.ts', ['tslint:test']);
   gulp.watch('./src/styles/**/*.scss', ['sass:watch']);
-  gulp.watch(['./examples/*.html']).on('change', reload);
+  gulp.watch(['./examples/*.html', './docs/*/*.html']).on('change', reload);
 
   browserSync({
     server: {

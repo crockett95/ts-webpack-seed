@@ -7,11 +7,8 @@ module.exports = function (config) {
   shared.plugins.push('karma-coverage');
   shared.reporters.push('coverage');
   shared.coverageReporter = {
-    dir: '.tmp/coverage',
-    reporters: [
-      { type: 'json', subdir: '.', file: 'coverage.json' },
-      { type: 'html', subdir: '.' }
-    ]
+    type: 'json',
+    dir: '.tmp/coverage'
   };
 
   config.set(shared);
